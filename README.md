@@ -1,4 +1,16 @@
 # Image Analysis API using Azure Cognitive AI
+
+### Table of Contents
+
+- [Why?](#why-🤔)
+- [Built Using](#built-using-🔧)
+- [Getting Started](#getting-started)
+- [Sample Response](#sample-response)
+- [Endpoints](#endpoints)
+- [Response Codes](#response-codes)
+- [Limitations](#limitations)
+- [Thank you!](#if-youve-reached-till-here-youre-awesome-thanks-for-taking-the-time-to-use-my-api-🙌🏻)  
+
 ## Why? 🤔
 
 I wanted to develop a simplified REST API which uses the image analysis service offered by [Microsoft Azure Cognitive AI](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-image-analysis?tabs=3-2), with the goal of enhancing accessibility.
@@ -36,7 +48,7 @@ Alternatively, you can follow along to see how to use a GUI tool like Postman to
 
 ![Postman New Request](https://i.imgur.com/HD7vEjA.png)
 
-2. Enter the base URL along with the required endpoint. Change the request type to POST.
+2. Enter the base URL along with the required [endpoint](#endpoints). Change the request type to POST.
 
 ![Postman Change Request Type](https://i.imgur.com/vh5q66Q.png)
 
@@ -78,7 +90,7 @@ Just make sure to change the image path to that in your system and modify the ty
 
 ## Endpoints
 
-**URL structure:**
+**URL structure:** 
 
     159.65.225.73:3000/<endpoint-here>
 
