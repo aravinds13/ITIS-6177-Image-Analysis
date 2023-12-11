@@ -52,6 +52,16 @@ Alternatively, you can follow along to see how to use a GUI tool like Postman to
 
 ![Voila!](https://i.imgur.com/Xnjreoy.png)
 
+You can achieve the same result using CLI with the help of cURL like this:
+```
+curl -X 'POST' \
+  'http://159.65.225.73:3000/generate-caption' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: multipart/form-data' \
+  -F 'image=@/Users/aravind/Downloads/cat_compressed.gif;type=image/gif'
+```
+Just make sure to change the image path to that in your system and modify the type accordingly.
+
 ### Sample Response
 ```json
 {
@@ -65,11 +75,6 @@ Alternatively, you can follow along to see how to use a GUI tool like Postman to
     }
 }
 ```
-
-
-
-
-
 
 ## Endpoints
 
