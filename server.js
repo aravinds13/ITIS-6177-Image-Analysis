@@ -284,7 +284,7 @@ const handleError = (req,res) => {
     res.status(statusCodes.NOT_FOUND);
     res.json(errors.NOT_FOUND)
   }
-  else if(!isValidImage(req.file.mimetype)){
+  else if(!isValidImage(req.file)){
     res.status(statusCodes.BAD_REQUEST);
     res.json(errors.INVALID_FORMAT);
   }
