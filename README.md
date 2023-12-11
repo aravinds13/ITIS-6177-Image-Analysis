@@ -7,7 +7,7 @@ The focus is on eliminating the complexity and hassle associated with configurin
 
 (And, of course, to impress my professor as this serves as my final project ¯\\_(ツ)_/¯ )
 
-## Built using 🔧
+## Built Using 🔧
 
 - Microsoft Azure Cognitive AI (Version [3.2](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/how-to/call-analyze-image?tabs=rest) and [4.0](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/how-to/call-analyze-image-40?pivots=programming-language-rest-api))
 - [Node.js](https://nodejs.org/en)
@@ -17,7 +17,7 @@ The focus is on eliminating the complexity and hassle associated with configurin
 - [Swagger UI](https://swagger.io/tools/swagger-ui/)
 - [image-size](https://www.npmjs.com/package/image-size)
 
-## Getting started
+## Getting Started
 Let's go!
 
 [Swagger](http://159.65.225.73:3000/docs/) documentation has been configured for this project and can be used to familiarize yourself with the API endpoints.
@@ -44,7 +44,7 @@ Alternatively, you can follow along to see how to use a tool like [Postman](http
 
 ![Postman Change File Type](https://i.imgur.com/t1I5I6v.png)
 
-4. Click on *Select Files* under Values field and select an image (JPG, PNG, GIF, or BMP) from your system. Once selected, hit the Send button.
+4. Click on *Select Files* under Value field and select an image (JPG, PNG, GIF, or BMP) from your system. Once selected, hit the Send button.
 
 ![Vibing Cat](https://s5.gifyu.com/images/SiWE9.gif)
 
@@ -86,10 +86,19 @@ Alternatively, you can follow along to see how to use a tool like [Postman](http
 | POST | /generate-tags | Generate tags for an image. |
 | POST | /read-text | Read text from an image. |
 
+
+## Response Codes
+
+| Code | Type | Description |
+| :--------: | :------- | :------- |
+| 200 | OK | Congrats! Your API call went through just fine. |
+| 400 | Bad Request | There's most likely an issue with the file you uploaded. Please check the limitations section to know more about supported file types. |
+| 404 | Not Found | You'll get this error if you didn't send a file with your request. If you did, make sure the key is set to "image". |
+
 ## Limitations
 - File format must be JPG, PNG, GIF, or BMP.
 - Image resolution must be greater than 50x50 pixels and less than 16,000x16,000 pixels.
 - File size must be within 4 megabytes (MB).
-- Due to the current limitation in Azure free tier, the number of calls are limited to 10 per second.
+- Due to the current limitation in Azure free tier, the number of calls is limited to 10 per second.
 
 ### If you've reached till here, you're awesome! Thanks for taking the time to use my API 🙌🏻
