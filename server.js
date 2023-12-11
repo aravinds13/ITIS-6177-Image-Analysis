@@ -150,8 +150,12 @@ app.post('/read-text', upload.single('image'), (req,res) => {
           headers
         })
         .then((response)=>{
+          const {readResult, metadata} = response.data;
           res.status(statusCodes.SUCCESS);
-          res.json(response.data);
+          res.json({
+            readResult,
+            metadata
+          });
         })
         .catch((error) => {
           res.send(error);
