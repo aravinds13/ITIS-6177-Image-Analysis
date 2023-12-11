@@ -8,19 +8,19 @@ const fs = require('fs');
 const {
   errors,
   statusCodes
-} = require('./strings.js');
+} = require('./helpers/strings.js');
 const {
   headers,
   port,
   uriBase,
   uriBase4
-} = require('./config.js');
+} = require('./helpers/config.js');
 const {
   isValidFile,
   isValidFileSize,
   isValidImage,
   isValidResolution,
-} = require('./validations.js');
+} = require('./helpers/validations.js');
 
 const app = express();
 
