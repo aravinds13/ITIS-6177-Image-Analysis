@@ -24,11 +24,11 @@ Let's go!
 
 ![Swagger UI](https://i.imgur.com/EcVqscX.png)
 
-Alternatively, you can follow along to see how to use a tool like [Postman](https://www.postman.com/) to make the API calls.
+Alternatively, you can follow along to see how to use a GUI tool like Postman to make the API calls.
 
 
 ### Prerequisites
-- Postman
+- [Postman](https://www.postman.com/)
 - That's it! :D
 
 ### Steps
