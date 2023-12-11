@@ -1,6 +1,8 @@
 const express = require('express');
 const axios = require('axios');
 const multer = require('multer');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./docs/swagger.json');
 const fs = require('fs');
 
 const {
@@ -299,3 +301,5 @@ const handleError = (req,res) => {
 app.listen(port, () =>{
     console.log(`App running in port ${port}`);
 });
+
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));

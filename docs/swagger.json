@@ -1,0 +1,188 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Image Analysis API",
+    "description": "API for analysing images using Azure Cognitive AI",
+    "contact": {
+      "name": "API Support",
+      "email": "asreekum@uncc.edu"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Endpoints",
+      "description": "Image analysis endpoints"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "securityDefinitions": {},
+  "consumes": [
+    "multipart/form-data"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/detect-colors": {
+      "post": {
+        "tags":["Endpoints"],
+        "consumes": ["multipart/form-data"],
+        "produces": ["application/json"],
+        "description": "Detect dominant colors in an image.",
+        "parameters":[{
+          "in": "formData",
+          "name": "image",
+          "type": "file",
+          "description": "Upload an image of type jpg, png, gif, or bmp.",
+          "required": true
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/detect-categories": {
+      "post": {
+        "tags":["Endpoints"],
+        "consumes": ["multipart/form-data"],
+        "produces": ["application/json"],
+        "description": "Detect categories based on an image.",
+        "parameters":[{
+          "in": "formData",
+          "name": "image",
+          "type": "file",
+          "description": "Upload an image of type jpg, png, gif, or bmp.",
+          "required": true
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/detect-objects": {
+      "post": {
+        "tags":["Endpoints"],
+        "consumes": ["multipart/form-data"],
+        "produces": ["application/json"],
+        "description": "Detect objects in an image.",
+        "parameters":[{
+          "in": "formData",
+          "name": "image",
+          "type": "file",
+          "description": "Upload an image of type jpg, png, gif, or bmp.",
+          "required": true
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/generate-caption": {
+      "post": {
+        "tags":["Endpoints"],
+        "consumes": ["multipart/form-data"],
+        "produces": ["application/json"],
+        "description": "Generate caption for an image.",
+        "parameters":[{
+          "in": "formData",
+          "name": "image",
+          "type": "file",
+          "description": "Upload an image of type jpg, png, gif, or bmp.",
+          "required": true
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/generate-tags": {
+      "post": {
+        "tags":["Endpoints"],
+        "consumes": ["multipart/form-data"],
+        "produces": ["application/json"],
+        "description": "Generate tags for an image.",
+        "parameters":[{
+          "in": "formData",
+          "name": "image",
+          "type": "file",
+          "description": "Upload an image of type jpg, png, gif, or bmp.",
+          "required": true
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/read-text": {
+      "post": {
+        "tags":["Endpoints"],
+        "consumes": ["multipart/form-data"],
+        "produces": ["application/json"],
+        "description": "Read text from an image.",
+        "parameters":[{
+          "in": "formData",
+          "name": "image",
+          "type": "file",
+          "description": "Upload an image of type jpg, png, gif, or bmp.",
+          "required": true
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  }
+}
