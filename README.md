@@ -52,7 +52,7 @@ Alternatively, you can follow along to see how to use a GUI tool like Postman to
 
 ![Voila!](https://i.imgur.com/Xnjreoy.png)
 
-You can achieve the same result using CLI with the help of cURL like this:
+You can achieve the same result using CLI with the help of [cURL](https://curl.se/) like this:
 ```
 curl -X 'POST' \
   'http://159.65.225.73:3000/generate-caption' \
