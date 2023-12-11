@@ -72,11 +72,7 @@ app.post('/detect-colors', upload.single('image'), (req,res) => {
     else{
       handleError(req,res);
     }
-    fs.unlink(`./uploads/${req?.file?.filename}`, (err) => {
-      if (err) {
-        console.error(err);
-      }
-    });
+    deleteImage(req.file.filename);
   }
 });
 
@@ -117,11 +113,7 @@ app.post('/detect-categories', upload.single('image'), (req,res) => {
     else{
       handleError(req,res);
     }
-    fs.unlink(`./uploads/${req?.file?.filename}`, (err) => {
-      if (err) {
-        console.error(err);
-      }
-    });
+    deleteImage(req.file.filename);
   }
 });
 
@@ -164,11 +156,7 @@ app.post('/read-text', upload.single('image'), (req,res) => {
     else{
       handleError(req,res);
     }
-    fs.unlink(`./uploads/${req?.file?.filename}`, (err) => {
-      if (err) {
-        console.error(err);
-      }
-    });
+    deleteImage(req.file.filename);
   }
 });
 
@@ -211,11 +199,7 @@ app.post('/generate-caption', upload.single('image'), (req,res) => {
     else{
       handleError(req,res);
     }
-    fs.unlink(`./uploads/${req?.file?.filename}`, (err) => {
-      if (err) {
-        console.error(err);
-      }
-    });
+    deleteImage(req.file.filename);
   }
 });
 
@@ -258,11 +242,7 @@ app.post('/generate-tags', upload.single('image'), (req,res) => {
     else{
       handleError(req,res);
     }
-    fs.unlink(`./uploads/${req?.file?.filename}`, (err) => {
-      if (err) {
-        console.error(err);
-      }
-    });
+    deleteImage(req.file.filename);
   }
 });
 
@@ -305,11 +285,7 @@ app.post('/detect-objects', upload.single('image'), (req,res) => {
     else{
       handleError(req,res);
     }
-    fs.unlink(`./uploads/${req?.file?.filename}`, (err) => {
-      if (err) {
-        console.error(err);
-      }
-    });
+    deleteImage(req.file.filename);
   }
 });
 
@@ -330,6 +306,14 @@ const handleError = (req,res) => {
     res.status(statusCodes.BAD_REQUEST);
     res.json(errors.INVALID_RESOLUTION);
   }
+}
+
+const deleteImage = (filename) => {
+  fs.unlink(`./uploads/${filename}`, (err) => {
+    if (err) {
+      console.error(err);
+    }
+  });
 }
 
 app.listen(port, () =>{
