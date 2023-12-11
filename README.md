@@ -60,7 +60,7 @@ Alternatively, you can follow along to see how to use a GUI tool like Postman to
 
 ![Vibing Cat](https://s5.gifyu.com/images/SiWE9.gif)
 
-5. And voila! You've got your first API reponse! 🎉
+5. And voila! You've got your first API response! 🎉
 
 ![Voila!](https://i.imgur.com/Xnjreoy.png)
 
