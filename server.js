@@ -72,6 +72,11 @@ app.post('/detect-colors', upload.single('image'), (req,res) => {
     else{
       handleError(req,res);
     }
+    fs.unlink(`./uploads/${req?.file?.filename}`, (err) => {
+      if (err) {
+        console.error(err);
+      }
+    });
   }
 });
 
@@ -112,6 +117,11 @@ app.post('/detect-categories', upload.single('image'), (req,res) => {
     else{
       handleError(req,res);
     }
+    fs.unlink(`./uploads/${req?.file?.filename}`, (err) => {
+      if (err) {
+        console.error(err);
+      }
+    });
   }
 });
 
@@ -150,6 +160,11 @@ app.post('/read-text', upload.single('image'), (req,res) => {
     else{
       handleError(req,res);
     }
+    fs.unlink(`./uploads/${req?.file?.filename}`, (err) => {
+      if (err) {
+        console.error(err);
+      }
+    });
   }
 });
 
@@ -192,6 +207,11 @@ app.post('/generate-caption', upload.single('image'), (req,res) => {
     else{
       handleError(req,res);
     }
+    fs.unlink(`./uploads/${req?.file?.filename}`, (err) => {
+      if (err) {
+        console.error(err);
+      }
+    });
   }
 });
 
@@ -234,6 +254,11 @@ app.post('/generate-tags', upload.single('image'), (req,res) => {
     else{
       handleError(req,res);
     }
+    fs.unlink(`./uploads/${req?.file?.filename}`, (err) => {
+      if (err) {
+        console.error(err);
+      }
+    });
   }
 });
 
@@ -276,6 +301,11 @@ app.post('/detect-objects', upload.single('image'), (req,res) => {
     else{
       handleError(req,res);
     }
+    fs.unlink(`./uploads/${req?.file?.filename}`, (err) => {
+      if (err) {
+        console.error(err);
+      }
+    });
   }
 });
 
