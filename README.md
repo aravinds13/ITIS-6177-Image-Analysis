@@ -1,5 +1,7 @@
 # Image Analysis API using Azure Cognitive AI
 
+[__Disclaimer:__ The API is not functional at the moment because I had to kill the Azure resource due to financial constraints 🥲]
+
 ### Table of Contents
 
 - [Why?](#why-🤔)
